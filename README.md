@@ -27,8 +27,7 @@ Demos using `Consume()`:
 # Demo showing how messages are pulled by workers
 ./tmux/consumeworker.sh
 # Demo with slow workers showing the heartbeat errors
-# Run `make produce` a second time to see how slow workers pull
-# more messages that they should.
+# Run `make produce` a second time to see how slow workers pull messages more than they should.
 ./tmux/slowconsumeworker.sh
 ```
 
