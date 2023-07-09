@@ -22,7 +22,7 @@ func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
-	nc, err := nats.Connect(nats.DefaultURL)
+	nc, err := nats.Connect(nats.DefaultURL, nats.Name("Worker"))
 	if err != nil {
 		log.Fatalf("cannot connect to NATS server: %v", err)
 	}
