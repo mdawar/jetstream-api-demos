@@ -1,4 +1,4 @@
-# NATS JetStream Simplified API Demo
+# NATS JetStream API Work Queue Demo
 
 ## Commands
 

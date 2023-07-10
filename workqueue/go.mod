@@ -1,4 +1,4 @@
-module jobqueue
+module workqueue
 
 go 1.20
 
