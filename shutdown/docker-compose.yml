@@ -1,0 +1,22 @@
+volumes:
+  jetstream_data:
+    driver: local
+
+services:
+  server:
+    image: nats:latest
+    command: --config nats-server.conf
+    ports:
+      - target: 4222
+        published: 4222
+        protocol: tcp
+      - target: 8222
+        published: 8222
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: ./nats-server.conf
+        target: /nats-server.conf
+      - type: volume
+        source: jetstream_data
+        target: /data
